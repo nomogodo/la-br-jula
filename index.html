@@ -1,0 +1,3012 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurante La Brújula - Experiencia gastronómica de lujo frente al mar en Alicante. Marisco fresco, arroces tradicionales y vistas inolvidables al puerto deportivo.">
+    <meta name="keywords" content="restaurante alicante, marisco, paella, puerto deportivo, fine dining, mediterráneo">
+    <meta name="author" content="MesaWeb Studio Premium">
+    <meta property="og:title" content="La Brújula | Fine Dining en el Puerto de Alicante">
+    <meta property="og:description" content="Descubre la excelencia del marisco fresco y los arroces tradicionales con las mejores vistas al Mediterráneo">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://labrujula-alicante.com">
+    
+    <title>La Brújula | Experiencia Gastronómica frente al Mar - Alicante</title>
+    
+    <!-- Preconnect para optimización -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fuentes Premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Pro -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- GSAP para animaciones avanzadas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.29/dist/lenis.min.js"></script>
+
+    <style>
+        /* ===== CONFIGURACIÓN AVANZADA CSS ===== */
+        :root {
+            /* Paleta de Colores Premium */
+            --color-primary: #0a1628;        /* Azul marino profundo */
+            --color-secondary: #1e3a5f;      /* Azul océano */
+            --color-accent: #c9a961;         /* Dorado champagne */
+            --color-accent-light: #d4b978;   /* Dorado claro */
+            --color-accent-dark: #a89050;    /* Dorado oscuro */
+            --color-cream: #f8f6f0;          /* Blanco roto cálido */
+            --color-white: #ffffff;
+            --color-gray: #8b92a8;           /* Gris azulado */
+            --color-dark-gray: #2d3748;
+            --color-black: #0a0a0a;
+            
+            /* Gradientes Premium */
+            --gradient-gold: linear-gradient(135deg, #c9a961 0%, #f4e5c2 50%, #c9a961 100%);
+            --gradient-dark: linear-gradient(135deg, #0a1628 0%, #1e3a5f 100%);
+            --gradient-ocean: linear-gradient(180deg, rgba(10,22,40,0.95) 0%, rgba(30,58,95,0.9) 100%);
+            --gradient-text: linear-gradient(135deg, #c9a961 0%, #f4e5c2 50%, #c9a961 100%);
+            
+            /* Tipografía */
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --font-accent: 'Cormorant Garamond', serif;
+            
+            /* Espaciado */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 2rem;
+            --space-lg: 4rem;
+            --space-xl: 8rem;
+            --space-2xl: 12rem;
+            
+            /* Transiciones */
+            --transition-fast: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-base: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            
+            /* Sombras */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --shadow-gold: 0 10px 40px -10px rgba(201, 169, 97, 0.5);
+            
+            /* Bordes */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 16px;
+            --radius-xl: 24px;
+            --radius-full: 9999px;
+            
+            /* Z-index */
+            --z-base: 1;
+            --z-dropdown: 1000;
+            --z-sticky: 1020;
+            --z-fixed: 1030;
+            --z-modal-backdrop: 1040;
+            --z-modal: 1050;
+            --z-popover: 1060;
+            --z-tooltip: 1070;
+        }
+
+        /* ===== RESET AVANZADO ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-primary);
+            background-color: var(--color-cream);
+            line-height: 1.6;
+            overflow-x: hidden;
+            cursor: none;
+        }
+
+        /* ===== CUSTOM CURSOR PREMIUM ===== */
+        .cursor {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--color-accent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99999;
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s, background-color 0.3s;
+            mix-blend-mode: difference;
+        }
+
+        .cursor-dot {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 6px;
+            background-color: var(--color-accent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 99999;
+            transform: translate(-50%, -50%);
+        }
+
+        .cursor.hover {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(201, 169, 97, 0.1);
+        }
+
+        .cursor.active {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(201, 169, 97, 0.2);
+        }
+
+        /* ===== PRELOADER CINEMATOGRÁFICO ===== */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--color-primary);
+            z-index: 100000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        .preloader.hidden {
+            transform: translateY(-100%);
+        }
+
+        .preloader-logo {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 700;
+            color: var(--color-accent);
+            letter-spacing: 0.2em;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards 0.5s;
+        }
+
+        .preloader-text {
+            font-family: var(--font-accent);
+            font-size: 1.25rem;
+            color: var(--color-gray);
+            font-style: italic;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 1s;
+        }
+
+        .preloader-bar {
+            width: 200px;
+            height: 2px;
+            background-color: rgba(201, 169, 97, 0.2);
+            margin-top: 3rem;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 1.2s;
+        }
+
+        .preloader-progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 0%;
+            background: var(--gradient-gold);
+            animation: loadProgress 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards 1.5s;
+        }
+
+        .preloader-counter {
+            position: absolute;
+            right: 0;
+            top: -30px;
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            color: var(--color-accent);
+            font-weight: 500;
+        }
+
+        @keyframes loadProgress {
+            0% { width: 0%; }
+            20% { width: 10%; }
+            40% { width: 30%; }
+            60% { width: 60%; }
+            80% { width: 85%; }
+            100% { width: 100%; }
+        }
+
+        /* ===== NAVGACIÓN PREMIUM ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 0;
+            z-index: var(--z-fixed);
+            transition: all var(--transition-base);
+        }
+
+        .navbar.scrolled {
+            padding: 1rem 0;
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .navbar-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            position: relative;
+            z-index: 10;
+        }
+
+        .navbar-logo-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            transition: transform var(--transition-bounce);
+        }
+
+        .navbar-brand:hover .navbar-logo-icon {
+            transform: rotate(360deg);
+        }
+
+        .navbar-logo-text {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--color-white);
+            letter-spacing: 0.1em;
+        }
+
+        .navbar-logo-text span {
+            color: var(--color-accent);
+        }
+
+        .navbar-menu {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .navbar-link {
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-white);
+            text-decoration: none;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color var(--transition-fast);
+        }
+
+        .navbar-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gradient-gold);
+            transition: width var(--transition-base);
+        }
+
+        .navbar-link:hover {
+            color: var(--color-accent);
+        }
+
+        .navbar-link:hover::before {
+            width: 100%;
+        }
+
+        .navbar-cta {
+            padding: 1rem 2.5rem;
+            background: var(--gradient-gold);
+            color: var(--color-primary);
+            border: none;
+            border-radius: var(--radius-full);
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all var(--transition-base);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .navbar-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .navbar-cta:hover::before {
+            left: 100%;
+        }
+
+        .navbar-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .navbar-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 10;
+        }
+
+        .navbar-toggle span {
+            display: block;
+            width: 30px;
+            height: 2px;
+            background: var(--color-white);
+            transition: all var(--transition-fast);
+        }
+
+        .navbar-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .navbar-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .navbar-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        /* ===== HERO SECTION CINEMATOGRÁFICA ===== */
+        .hero {
+            position: relative;
+            height: 100vh;
+            min-height: 800px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: var(--color-primary);
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10,22,40,0.9) 0%, rgba(30,58,95,0.8) 100%),
+                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80') center/cover;
+            z-index: 1;
+        }
+
+        .hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: float 20s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.5;
+            }
+            90% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(100px);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            max-width: 1200px;
+            padding: 0 3rem;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 2rem;
+            background: rgba(201, 169, 97, 0.1);
+            border: 1px solid rgba(201, 169, 97, 0.3);
+            border-radius: var(--radius-full);
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards 2s;
+        }
+
+        .hero-badge i {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 10vw, 8rem);
+            font-weight: 700;
+            line-height: 1;
+            color: var(--color-white);
+            margin-bottom: 2rem;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-title-line {
+            display: block;
+            overflow: hidden;
+        }
+
+        .hero-title-line-inner {
+            display: block;
+            transform: translateY(100%);
+            opacity: 0;
+            animation: revealText 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+        }
+
+        .hero-title-line:nth-child(1) .hero-title-line-inner {
+            animation-delay: 2.2s;
+        }
+
+        .hero-title-line:nth-child(2) .hero-title-line-inner {
+            animation-delay: 2.4s;
+            color: var(--color-accent);
+        }
+
+        @keyframes revealText {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-accent);
+            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+            font-style: italic;
+            color: var(--color-gray);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards 2.8s;
+        }
+
+        .hero-location {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--color-white);
+            margin-bottom: 3rem;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 3s;
+        }
+
+        .hero-location i {
+            color: var(--color-accent);
+        }
+
+        .hero-cta-group {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards 3.2s;
+        }
+
+        .btn {
+            padding: 1.25rem 3rem;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.875rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: none;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all var(--transition-base);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient-gold);
+            color: var(--color-primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--color-white);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .btn-outline:hover {
+            background: var(--color-white);
+            color: var(--color-primary);
+            border-color: var(--color-white);
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            color: var(--color-white);
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards 3.5s;
+        }
+
+        .hero-scroll-line {
+            width: 1px;
+            height: 60px;
+            background: linear-gradient(to bottom, var(--color-accent), transparent);
+            animation: scrollLine 2s ease-in-out infinite;
+        }
+
+        @keyframes scrollLine {
+            0%, 100% { transform: scaleY(1); opacity: 1; }
+            50% { transform: scaleY(0.5); opacity: 0.5; }
+        }
+
+        /* ===== SECCIÓN INTRODUCCIÓN ASIMÉTRICA ===== */
+        .intro {
+            position: relative;
+            padding: var(--space-2xl) 0;
+            background: var(--color-cream);
+            overflow: hidden;
+        }
+
+        .intro-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .intro-image-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-image {
+            width: 100%;
+            height: 700px;
+            object-fit: cover;
+            filter: grayscale(20%);
+            transition: filter var(--transition-slow);
+        }
+
+        .intro-image-wrapper:hover .intro-image {
+            filter: grayscale(0%);
+        }
+
+        .intro-image-frame {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid var(--color-accent);
+            z-index: -1;
+            transition: all var(--transition-base);
+        }
+
+        .intro-image-wrapper:hover .intro-image-frame {
+            top: -30px;
+            left: -30px;
+            right: 30px;
+            bottom: 30px;
+        }
+
+        .intro-badge {
+            position: absolute;
+            bottom: 40px;
+            right: -40px;
+            background: var(--gradient-gold);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .intro-badge-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            display: block;
+            line-height: 1;
+        }
+
+        .intro-badge-text {
+            font-size: 0.875rem;
+            color: var(--color-dark-gray);
+            font-weight: 500;
+        }
+
+        .intro-content {
+            padding: 2rem 0;
+        }
+
+        .intro-label {
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        .intro-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 700;
+            color: var(--color-primary);
+            line-height: 1.1;
+            margin-bottom: 2rem;
+        }
+
+        .intro-title span {
+            color: var(--color-accent);
+            font-style: italic;
+        }
+
+        .intro-text {
+            font-family: var(--font-accent);
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--color-dark-gray);
+            margin-bottom: 2rem;
+        }
+
+        .intro-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .intro-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .intro-feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(201, 169, 97, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-accent);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .intro-feature-content h4 {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .intro-feature-content p {
+            font-size: 0.9rem;
+            color: var(--color-gray);
+            line-height: 1.6;
+        }
+
+        /* ===== SECCIÓN EXPERIENCIA CON TABS ===== */
+        .experience {
+            position: relative;
+            padding: var(--space-2xl) 0;
+            background: var(--color-primary);
+            overflow: hidden;
+        }
+
+        .experience::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="0.5" fill="rgba(201,169,97,0.1)"/></svg>');
+            background-size: 50px 50px;
+            opacity: 0.5;
+        }
+
+        .experience-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-label {
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: var(--color-white);
+            line-height: 1.1;
+        }
+
+        .experience-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+        }
+
+        .experience-tab {
+            padding: 1rem 2.5rem;
+            background: transparent;
+            border: 1px solid rgba(201, 169, 97, 0.3);
+            border-radius: var(--radius-full);
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-gray);
+            cursor: pointer;
+            transition: all var(--transition-base);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-tab::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-gold);
+            opacity: 0;
+            transition: opacity var(--transition-base);
+            z-index: -1;
+        }
+
+        .experience-tab.active,
+        .experience-tab:hover {
+            color: var(--color-primary);
+            border-color: var(--color-accent);
+        }
+
+        .experience-tab.active::before,
+        .experience-tab:hover::before {
+            opacity: 1;
+        }
+
+        .experience-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .experience-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-lg);
+        }
+
+        .experience-image img {
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .experience-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .experience-text h3 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-white);
+            margin-bottom: 2rem;
+        }
+
+        .experience-text p {
+            font-family: var(--font-accent);
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: var(--color-gray);
+            margin-bottom: 2rem;
+        }
+
+        .experience-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .experience-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(201, 169, 97, 0.2);
+            color: var(--color-cream);
+            font-size: 1rem;
+        }
+
+        .experience-list li i {
+            color: var(--color-accent);
+            font-size: 1.25rem;
+        }
+
+        /* ===== GALERÍA MASONRY PREMIUM ===== */
+        .gallery {
+            padding: var(--space-2xl) 0;
+            background: var(--color-cream);
+        }
+
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 300px);
+            gap: 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item:nth-child(4) {
+            grid-column: span 2;
+        }
+
+        .gallery-item:nth-child(5) {
+            grid-row: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10,22,40,0.9), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-category {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--color-accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-white);
+        }
+
+        /* ===== MENÚ INTERACTIVO ===== */
+        .menu-section {
+            padding: var(--space-2xl) 0;
+            background: var(--gradient-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(201,169,97,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .menu-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 4rem;
+        }
+
+        .menu-category-block {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(201, 169, 97, 0.2);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .menu-category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(201, 169, 97, 0.3);
+        }
+
+        .menu-category-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+        }
+
+        .menu-category-title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-white);
+        }
+
+        .menu-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px dashed rgba(201, 169, 97, 0.2);
+            transition: all var(--transition-fast);
+        }
+
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+
+        .menu-item:hover {
+            transform: translateX(10px);
+        }
+
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.75rem;
+        }
+
+        .menu-item-title {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--color-white);
+        }
+
+        .menu-item-price {
+            font-family: var(--font-body);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-accent);
+        }
+
+        .menu-item-description {
+            font-family: var(--font-accent);
+            font-size: 1.1rem;
+            color: var(--color-gray);
+            line-height: 1.6;
+        }
+
+        .menu-item-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .menu-tag {
+            padding: 0.25rem 0.75rem;
+            background: rgba(201, 169, 97, 0.1);
+            border: 1px solid rgba(201, 169, 97, 0.3);
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--color-accent);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* ===== RESERVAS COMPLEJAS ===== */
+        .reservations {
+            padding: var(--space-2xl) 0;
+            background: var(--color-cream);
+            position: relative;
+        }
+
+        .reservations-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        .reservations-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .reservations-info h3 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 2rem;
+            line-height: 1.1;
+        }
+
+        .reservations-info > p {
+            font-family: var(--font-accent);
+            font-size: 1.25rem;
+            color: var(--color-dark-gray);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+        }
+
+        .contact-details {
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            flex-shrink: 0;
+        }
+
+        .contact-content h4 {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        .contact-content p,
+        .contact-content a {
+            font-size: 1rem;
+            color: var(--color-gray);
+            text-decoration: none;
+            line-height: 1.6;
+            transition: color var(--transition-fast);
+        }
+
+        .contact-content a:hover {
+            color: var(--color-accent);
+        }
+
+        .reservations-form {
+            background: var(--color-white);
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-label {
+            display: block;
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--color-gray-light);
+            border-radius: var(--radius-md);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--color-primary);
+            background: var(--color-white);
+            transition: all var(--transition-fast);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1.5rem;
+            background: var(--gradient-gold);
+            border: none;
+            border-radius: var(--radius-md);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        /* ===== TESTIMONIALS CAROUSEL 3D ===== */
+        .testimonials {
+            padding: var(--space-2xl) 0;
+            background: var(--color-primary);
+            overflow: hidden;
+        }
+
+        .testimonials-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        .testimonials-slider {
+            position: relative;
+            margin-top: 5rem;
+            perspective: 1000px;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(201, 169, 97, 0.2);
+            border-radius: var(--radius-xl);
+            padding: 3rem;
+            backdrop-filter: blur(10px);
+            transition: all var(--transition-base);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .testimonial-rating {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-rating i {
+            color: var(--color-accent);
+            font-size: 1.25rem;
+        }
+
+        .testimonial-text {
+            font-family: var(--font-accent);
+            font-size: 1.5rem;
+            line-height: 1.8;
+            color: var(--color-cream);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .testimonial-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--gradient-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .testimonial-info h4 {
+            font-family: var(--font-body);
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--color-white);
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-info span {
+            font-size: 0.9rem;
+            color: var(--color-gray);
+        }
+
+        .testimonial-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(201, 169, 97, 0.1);
+            border: 1px solid rgba(201, 169, 97, 0.3);
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            color: var(--color-accent);
+            margin-top: 1rem;
+        }
+
+        /* ===== FOOTER PREMIUM ===== */
+        footer {
+            background: var(--color-black);
+            color: var(--color-white);
+            padding: 6rem 0 2rem;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--gradient-gold);
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-brand .navbar-logo-text {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .footer-brand p {
+            font-family: var(--font-accent);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--color-gray);
+            margin-bottom: 2rem;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social a {
+            width: 50px;
+            height: 50px;
+            border: 1px solid rgba(201, 169, 97, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-accent);
+            font-size: 1.25rem;
+            transition: all var(--transition-base);
+        }
+
+        .footer-social a:hover {
+            background: var(--gradient-gold);
+            border-color: var(--color-accent);
+            color: var(--color-primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-column h4 {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--color-white);
+            margin-bottom: 2rem;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--color-gray);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-links a::before {
+            content: '→';
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--color-accent);
+            padding-left: 0.5rem;
+        }
+
+        .footer-links a:hover::before {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .footer-bottom p {
+            color: var(--color-gray);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+
+        /* ===== RESPONSIVE AVANZADO ===== */
+        @media (max-width: 1200px) {
+            .intro-grid,
+            .experience-content,
+            .menu-grid,
+            .reservations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .gallery-item:nth-child(1) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .navbar-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background: var(--color-primary);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                transition: right var(--transition-base);
+            }
+
+            .navbar-menu.active {
+                right: 0;
+            }
+
+            .navbar-toggle {
+                display: flex;
+            }
+
+            .navbar-cta {
+                display: none;
+            }
+
+            .hero {
+                min-height: 700px;
+            }
+
+            .intro-image,
+            .experience-image img {
+                height: 500px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --space-2xl: 6rem;
+            }
+
+            .navbar-container {
+                padding: 0 1.5rem;
+            }
+
+            .hero-content {
+                padding: 0 1.5rem;
+            }
+
+            .intro-container,
+            .experience-container,
+            .gallery-container,
+            .menu-container,
+            .reservations-container,
+            .footer-container {
+                padding: 0 1.5rem;
+            }
+
+            .intro-features {
+                grid-template-columns: 1fr;
+            }
+
+            .experience-tabs {
+                gap: 0.5rem;
+            }
+
+            .experience-tab {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.8rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-category-block {
+                padding: 2rem;
+            }
+
+            .reservations-form {
+                padding: 2rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                cursor: auto;
+            }
+
+            .cursor,
+            .cursor-dot {
+                display: none;
+            }
+        }
+
+        /* ===== UTILIDADES DE ANIMACIÓN ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .parallax {
+            will-change: transform;
+        }
+
+        /* Animaciones keyframes adicionales */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Efecto de texto scramble */
+        .scramble-text {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo">LA BRÚJULA</div>
+        <div class="preloader-text">Experiencia Gastronómica</div>
+        <div class="preloader-bar">
+            <div class="preloader-progress"></div>
+            <div class="preloader-counter" id="preloaderCounter">0%</div>
+        </div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">
+                <div class="navbar-logo-icon">🧭</div>
+                <div class="navbar-logo-text">LA <span>BRÚJULA</span></div>
+            </a>
+
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="#inicio" class="navbar-link">Inicio</a></li>
+                <li><a href="#nosotros" class="navbar-link">Nosotros</a></li>
+                <li><a href="#experiencia" class="navbar-link">Experiencia</a></li>
+                <li><a href="#carta" class="navbar-link">Carta</a></li>
+                <li><a href="#galeria" class="navbar-link">Galería</a></li>
+                <li><a href="#reservas" class="navbar-link">Reservas</a></li>
+            </ul>
+
+            <a href="tel:+34965202093" class="navbar-cta magnetic-btn">
+                <i class="fas fa-phone"></i> Reservar
+            </a>
+
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-bg"></div>
+        <div class="hero-particles" id="heroParticles"></div>
+        
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-award"></i>
+                <span>Top 102 de 2,023 Restaurantes en Alicante</span>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="hero-title-line">
+                    <span class="hero-title-line-inner">SABOR</span>
+                </span>
+                <span class="hero-title-line">
+                    <span class="hero-title-line-inner">FRENTE AL MAR</span>
+                </span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Donde el Mediterráneo se encuentra con la excelencia culinaria. 
+                Marisco fresco, arroces tradicionales y vistas inolvidables en el corazón del puerto deportivo.
+            </p>
+
+            <div class="hero-location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Marina Deportiva Puerto de Alicante, Muelle de Levante, 6</span>
+            </div>
+
+            <div class="hero-cta-group">
+                <a href="#reservas" class="btn btn-primary magnetic-btn">
+                    <i class="fas fa-calendar-check"></i> Reservar Mesa
+                </a>
+                <a href="#carta" class="btn btn-outline magnetic-btn">
+                    <i class="fas fa-book-open"></i> Explorar Carta
+                </a>
+            </div>
+        </div>
+
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="hero-scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro" id="nosotros">
+        <div class="intro-container">
+            <div class="intro-grid">
+                <div class="intro-image-wrapper parallax" data-speed="0.5">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Restaurante La Brújula - Interior" class="intro-image">
+                    <div class="intro-image-frame"></div>
+                    <div class="intro-badge">
+                        <span class="intro-badge-number">4.2</span>
+                        <span class="intro-badge-text">★ Rating<br>638 Reseñas</span>
+                    </div>
+                </div>
+
+                <div class="intro-content">
+                    <span class="intro-label reveal">Nuestra Historia</span>
+                    <h2 class="intro-title reveal">
+                        Más de 20 años <span>navegando</span> por los sabores del Mediterráneo
+                    </h2>
+                    <p class="intro-text reveal">
+                        Situados en una de las ubicaciones más privilegiadas de Alicante, 
+                        en La Brújula hemos convertido la pasión por el marisco fresco y 
+                        los arroces tradicionales en una experiencia gastronómica única.
+                    </p>
+                    <p class="intro-text reveal">
+                        Cada plato es un viaje sensorial que combina la tradición culinaria 
+                        mediterránea con el producto más fresco del día, siempre acompañado 
+                        de las espectaculares vistas al puerto deportivo y al Mar Mediterráneo.
+                    </p>
+
+                    <div class="intro-features">
+                        <div class="intro-feature reveal">
+                            <div class="intro-feature-icon">
+                                <i class="fas fa-fish"></i>
+                            </div>
+                            <div class="intro-feature-content">
+                                <h4>Producto Fresco</h4>
+                                <p>Selección diaria de marisco y pescado de lonja</p>
+                            </div>
+                        </div>
+
+                        <div class="intro-feature reveal">
+                            <div class="intro-feature-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <div class="intro-feature-content">
+                                <h4>Vistas Únicas</h4>
+                                <p>Terraza frente al mar con puestas de sol espectaculares</p>
+                            </div>
+                        </div>
+
+                        <div class="intro-feature reveal">
+                            <div class="intro-feature-icon">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <div class="intro-feature-content">
+                                <h4>Cocina Tradicional</h4>
+                                <p>Recetas auténticas con toque contemporáneo</p>
+                            </div>
+                        </div>
+
+                        <div class="intro-feature reveal">
+                            <div class="intro-feature-icon">
+                                <i class="fas fa-wine-glass"></i>
+                            </div>
+                            <div class="intro-feature-content">
+                                <h4>Carta de Vinos</h4>
+                                <p>Selección de los mejores caldos nacionales</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia Section -->
+    <section class="experience" id="experiencia">
+        <div class="experience-container">
+            <div class="section-header reveal">
+                <span class="section-label">Vive la Experiencia</span>
+                <h2 class="section-title">Un Viaje Gastronómico Inolvidable</h2>
+            </div>
+
+            <div class="experience-tabs reveal">
+                <button class="experience-tab active" data-tab="marisco">
+                    <i class="fas fa-drumstick-bite"></i> Marisco
+                </button>
+                <button class="experience-tab" data-tab="arroces">
+                    <i class="fas fa-paella"></i> Arroces
+                </button>
+                <button class="experience-tab" data-tab="pescado">
+                    <i class="fas fa-fish"></i> Pescado
+                </button>
+                <button class="experience-tab" data-tab="carnes">
+                    <i class="fas fa-steak"></i> Carnes
+                </button>
+            </div>
+
+            <div class="experience-content">
+                <div class="experience-image parallax" data-speed="0.3">
+                    <img src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=800&q=80" alt="Marisco Fresco" id="experienceImage">
+                </div>
+
+                <div class="experience-text" id="experienceText">
+                    <h3>Marisco del Día</h3>
+                    <p>
+                        Cada mañana seleccionamos personalmente el mejor marisco de la lonja. 
+                        Langostas, bogavantes, gambas rojas, percebes y los mejores mariscos 
+                        del Cantábrico y el Mediterráneo.
+                    </p>
+                    <ul class="experience-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Langosta a la plancha con mantequilla de ajo</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Bogavante azul del Cantábrico</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Gambas rojas de Denia a la sal</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Percebes de piedra gallegos</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Nécoras y centollos al natural</span>
+                        </li>
+                    </ul>
+                    <a href="#reservas" class="btn btn-primary magnetic-btn">
+                        Reservar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Masonry -->
+    <section class="gallery" id="galeria">
+        <div class="gallery-container">
+            <div class="section-header reveal">
+                <span class="section-label">Galería</span>
+                <h2 class="section-title" style="color: var(--color-primary);">Momentos Únicos</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Plato signature">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Alta Cocina</span>
+                        <h3 class="gallery-title">Nuestra Especialidad</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1550966871-3ed3c47e2ce2?w=800&q=80" alt="Terraza">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Ambiente</span>
+                        <h3 class="gallery-title">Terraza con Vistas</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80" alt="Curry">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Especialidad</span>
+                        <h3 class="gallery-title">Arroz con Marisco</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=800&q=80" alt="Cocina">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Interior</span>
+                        <h3 class="gallery-title">Ambiente Acogedor</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80" alt="Carne">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Carnes</span>
+                        <h3 class="gallery-title">Cortes Premium</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=800&q=80" alt="Postre">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Postres</span>
+                        <h3 class="gallery-title">Dulce Final</h3>
+                    </div>
+                </div>
+
+                <div class="gallery-item reveal">
+                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=800&q=80" alt="Cóctel">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Bar</span>
+                        <h3 class="gallery-title">Coctelería de Autor</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menú Section -->
+    <section class="menu-section" id="carta">
+        <div class="menu-container">
+            <div class="section-header reveal">
+                <span class="section-label">Nuestra Carta</span>
+                <h2 class="section-title">Propuestas Culinarias</h2>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-category-block reveal">
+                    <div class="menu-category-header">
+                        <div class="menu-category-icon">
+                            <i class="fas fa-drumstick-bite"></i>
+                        </div>
+                        <h3 class="menu-category-title">Para Compartir</h3>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-title">Tabla de Mariscos Fríos</h4>
+                            <span class="menu-item-price">45€</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Selección de ostras, langostinos, gambas, nécoras y bogavante con salsa cocktail y limón
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Recomendado</span>
+                            <span class="menu-tag">2 personas</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-title">Jamón Ibérico de Bellota</h4>
+                            <span class="menu-item-price">28€</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Cortado a cuchillo, 100gr de la mejor selección con pan con tomate
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-title">Huevos Rotos con Jamón</h4>
+                            <span class="menu-item-price">18€</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Huevos camperos sobre patatas fritas crujientes con jamón ibérico
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-title">Ensalada de Tomate con Anchoas</h4>
+                            <span class="menu-item-price">16€</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Tomate raf con anchoas del Cantábrico, alcaparras y aceite de oliva virgen extra
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Vegetariano</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-category-block reveal">
+                    <div class="menu-category-header">
+                        <div class="menu-category-icon">
+                            <i class="fas fa-paella"></i>
+                        </div>
+                        <h3 class="menu-category-title">Arroces y Fideuás</h3>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-title">Paella de Marisco</h4>
+                            <span class="menu-item-price">22€/p</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Arroz bomba con gambas, langostinos, mejillones, chipirones y calamares (mínimo 2 personas)
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Especialidad</span>
+                            <span class="menu-tag">Mín. 2p</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-title">Arroz Senyoret</h4>
+                            <span class="menu-item-price">24€/p</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Arroz con marisco pelado: gambas, langostinos, rape y cigalas. Fácil de comer
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Premium</span>
+                            <span class="menu-tag">Mín. 2p</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-title">Fideuá de Marisco</h4>
+                            <span class="menu-item-price">20€/p</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Fideos finos con marisco fresco, servida con alioli casero
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Tradicional</span>
+                            <span class="menu-tag">Mín. 2p</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-title">Arroz Caldoso de Bogavante</h4>
+                            <span class="menu-item-price">32€/p</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Arroz meloso con bogavante azul, gambas rojas y fumet de pescado
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Lujo</span>
+                            <span class="menu-tag">Mín. 2p</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-category-block reveal">
+                    <div class="menu-category-header">
+                        <div class="menu-category-icon">
+                            <i class="fas fa-fish"></i>
+                        </div>
+                        <h3 class="menu-category-title">Pescado Fresco</h3>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-title">Lubina a la Espalda</h4>
+                            <span class="menu-item-price">28€</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Lubina fresca abierta por la espalda, horneada con sal gorda y hierbas aromáticas
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-title">Rodaballo Salvaje</h4>
+                            <span class="menu-item-price">MP</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Rodaballo del Cantábrico a la plancha o al horno (precio según peso)
+                        </p>
+                        <div class="menu-item-tags">
+                            <span class="menu-tag">Temporada</span>
+                        </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-title">Sepia a la Plancha</h4>
+                            <span class="menu-item-price">22€</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Sepia fresca de la Costa Blanca a la plancha con alioli o ajoaceite
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-title">Tellinas al Vapor</h4>
+                            <span class="menu-item-price">24€</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Tellinas frescas al vapor con vino blanco, ajo y perejil
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-category-block reveal">
+                    <div class="menu-category-header">
+                        <div class="menu-category-icon">
+                            <i class="fas fa-wine-glass"></i>
+                        </div>
+                        <h3 class="menu-category-title">Bodega</h3>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-title">Sangría de la Casa</h4>
+                            <span class="menu-item-price">18€</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Jarra abundante con fruta fresca de temporada y vino tinto de calidad
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-title">Albariño Rías Baixas</h4>
+                            <span class="menu-item-price">22€</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Botella de Albariño DO Rías Baixas, perfecto para mariscos
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-title">Rioja Crianza</h4>
+                            <span class="menu-item-price">24€</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Selección de Rioja Crianza con 24 meses de envejecimiento
+                        </p>
+                    </div>
+
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            <h4 class="menu-item-title">Cava Brut Nature</h4>
+                            <span class="menu-item-price">20€</span>
+                        </div>
+                        <p class="menu-item-description">
+                            Cava premium brut nature, ideal para celebrar ocasiones especiales
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservas Section -->
+    <section class="reservations" id="reservas">
+        <div class="reservations-container">
+            <div class="reservations-grid">
+                <div class="reservations-info reveal">
+                    <span class="section-label" style="display: block; margin-bottom: 1rem;">Reservas</span>
+                    <h3>Reserva tu Mesa y Vive una Experiencia Única</h3>
+                    <p>
+                        Te recomendamos reservar con antelación, especialmente para fines de semana 
+                        y fechas señaladas. Para grupos numerosos, contáctanos directamente.
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>Ubicación</h4>
+                                <p>
+                                    Marina Deportiva Puerto de Alicante<br>
+                                    Muelle de Levante, 6<br>
+                                    03001 Alicante, España
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>Teléfono</h4>
+                                <p><a href="tel:+34965202093">+34 965 20 20 93</a></p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>Horario</h4>
+                                <p>
+                                    Lunes a Domingo<br>
+                                    11:00 - 00:00 (Cocina hasta 23:30)
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4>Formas de Pago</h4>
+                                <p>Efectivo, Tarjeta (Visa, Mastercard), Bizum</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="reservations-form reveal" id="reservationForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" class="form-control" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" class="form-control" required placeholder="+34 600 000 000">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="tu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="personas">Número de personas *</label>
+                            <select id="personas" name="personas" class="form-control" required>
+                                <option value="">Seleccionar</option>
+                                <option value="2">2 personas</option>
+                                <option value="3">3 personas</option>
+                                <option value="4">4 personas</option>
+                                <option value="5">5 personas</option>
+                                <option value="6">6 personas</option>
+                                <option value="7+">7 o más</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="fecha">Fecha *</label>
+                            <input type="date" id="fecha" name="fecha" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="hora">Hora *</label>
+                            <select id="hora" name="hora" class="form-control" required>
+                                <option value="">Seleccionar</option>
+                                <option value="13:00">13:00</option>
+                                <option value="13:30">13:30</option>
+                                <option value="14:00">14:00</option>
+                                <option value="14:30">14:30</option>
+                                <option value="20:00">20:00</option>
+                                <option value="20:30">20:30</option>
+                                <option value="21:00">21:00</option>
+                                <option value="21:30">21:30</option>
+                                <option value="22:00">22:00</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="notas">Notas especiales</label>
+                        <textarea id="notas" name="notas" class="form-control" rows="3" placeholder="Alergias, ocasión especial, preferencias..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit magnetic-btn">
+                        <i class="fas fa-paper-plane"></i> Solicitar Reserva
+                    </button>
+
+                    <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--color-gray); text-align: center;">
+                        <i class="fas fa-info-circle"></i> Te confirmaremos la reserva en menos de 2 horas
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios Section -->
+    <section class="testimonials">
+        <div class="testimonials-container">
+            <div class="section-header reveal">
+                <span class="section-label">Testimonios</span>
+                <h2 class="section-title">Lo Que Dicen Nuestros Clientes</h2>
+            </div>
+
+            <div class="testimonials-slider reveal">
+                <div class="testimonials-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Lugar agradable con buenas vistas al puerto. El marisco estaba fresco y la lubina al horno con sal estaba espectacular. Perfecto para ver la puesta de sol."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">MM</div>
+                            <div class="testimonial-info">
+                                <h4>Manuel M.</h4>
+                                <span>Torrejón de la Calzada, España</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-badge">
+                            <i class="fas fa-check-circle"></i> Cliente Verificado
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Buen lugar, buen precio, buen producto, buen servicio. La sepia a la plancha me enamoró. Los camareros muy simpáticos y atentos. Repetiremos seguro."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">V89</div>
+                            <div class="testimonial-info">
+                                <h4>Viriato89</h4>
+                                <span>Boadilla del Monte, España</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-badge">
+                            <i class="fas fa-check-circle"></i> Cliente Verificado
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Buena paella y sangría abundante. El personal es profesional y atento. Buena relación calidad-precio. Las vistas al puerto son inmejorables."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">LP</div>
+                            <div class="testimonial-info">
+                                <h4>Lilian P.</h4>
+                                <span>Francia</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-badge">
+                            <i class="fas fa-check-circle"></i> Cliente Verificado
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="navbar-logo-text">LA <span>BRÚJULA</span></div>
+                    <p>
+                        Más de 20 años ofreciendo la mejor experiencia gastronómica 
+                        frente al mar en el puerto deportivo de Alicante. Marisco fresco, 
+                        arroces tradicionales y vistas inolvidables.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/people/Restaurante-La-Brujula/100054209273549/" target="_blank" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="TripAdvisor">
+                            <i class="fab fa-tripadvisor"></i>
+                        </a>
+                        <a href="https://wa.me/34965202093" aria-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Explorar</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#experiencia">Experiencia</a></li>
+                        <li><a href="#carta">Nuestra Carta</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="#reservas">Reservas</a></li>
+                        <li><a href="#">Eventos Privados</a></li>
+                        <li><a href="#">Catering</a></li>
+                        <li><a href="#">Tarjetas Regalo</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Aviso Legal</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Política de Cookies</a></li>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Restaurante La Brújula. Todos los derechos reservados.</p>
+                <p>
+                    Diseñado con <i class="fas fa-heart" style="color: var(--color-accent);"></i> por 
+                    <a href="#">MesaWeb Studio Premium</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Avanzado -->
+    <script>
+        // ===== INICIALIZACIÓN =====
+        document.addEventListener('DOMContentLoaded', () => {
+            // Inicializar Lenis Smooth Scroll
+            const lenis = new Lenis({
+                duration: 1.2,
+                easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+                direction: 'vertical',
+                gestureDirection: 'vertical',
+                smooth: true,
+                mouseMultiplier: 1,
+                smoothTouch: false,
+                touchMultiplier: 2,
+            });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+            requestAnimationFrame(raf);
+
+            // Integrar Lenis con GSAP ScrollTrigger
+            gsap.registerPlugin(ScrollTrigger);
+            
+            lenis.on('scroll', ScrollTrigger.update);
+            gsap.ticker.add((time) => {
+                lenis.raf(time * 1000);
+            });
+            gsap.ticker.lagSmoothing(0);
+
+            // ===== PRELOADER =====
+            const preloader = document.getElementById('preloader');
+            const preloaderCounter = document.getElementById('preloaderCounter');
+            let progress = 0;
+
+            const counterInterval = setInterval(() => {
+                progress += Math.random() * 15;
+                if (progress > 100) progress = 100;
+                preloaderCounter.textContent = Math.floor(progress) + '%';
+                
+                if (progress === 100) {
+                    clearInterval(counterInterval);
+                    setTimeout(() => {
+                        preloader.classList.add('hidden');
+                        initAnimations();
+                    }, 500);
+                }
+            }, 200);
+
+            // ===== CUSTOM CURSOR =====
+            const cursor = document.querySelector('.cursor');
+            const cursorDot = document.querySelector('.cursor-dot');
+            let mouseX = 0, mouseY = 0;
+            let cursorX = 0, cursorY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+                cursorDot.style.left = mouseX + 'px';
+                cursorDot.style.top = mouseY + 'px';
+            });
+
+            function animateCursor() {
+                cursorX += (mouseX - cursorX) * 0.1;
+                cursorY += (mouseY - cursorY) * 0.1;
+                cursor.style.left = cursorX + 'px';
+                cursor.style.top = cursorY + 'px';
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            // Cursor hover effects
+            const interactiveElements = document.querySelectorAll('a, button, .gallery-item, .menu-item');
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+            });
+
+            // ===== NAVBAR =====
+            const navbar = document.getElementById('navbar');
+            const navbarToggle = document.getElementById('navbarToggle');
+            const navbarMenu = document.getElementById('navbarMenu');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            navbarToggle.addEventListener('click', () => {
+                navbarToggle.classList.toggle('active');
+                navbarMenu.classList.toggle('active');
+            });
+
+            // Cerrar menú al hacer click en un link
+            document.querySelectorAll('.navbar-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navbarToggle.classList.remove('active');
+                    navbarMenu.classList.remove('active');
+                });
+            });
+
+            // ===== PARTICULAS HERO =====
+            const heroParticles = document.getElementById('heroParticles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                heroParticles.appendChild(particle);
+            }
+
+            // ===== ANIMACIONES INICIALES =====
+            function initAnimations() {
+                // Reveal animations
+                const reveals = document.querySelectorAll('.reveal');
+                reveals.forEach((element, index) => {
+                    ScrollTrigger.create({
+                        trigger: element,
+                        start: 'top 85%',
+                        onEnter: () => {
+                            setTimeout(() => {
+                                element.classList.add('active');
+                            }, index * 100);
+                        }
+                    });
+                });
+
+                // Parallax effects
+                const parallaxElements = document.querySelectorAll('.parallax');
+                parallaxElements.forEach(element => {
+                    const speed = element.dataset.speed || 0.5;
+                    gsap.to(element, {
+                        y: (i, target) => -ScrollTrigger.maxScroll(window) * speed * 0.1,
+                        ease: 'none',
+                        scrollTrigger: {
+                            trigger: element.parentElement,
+                            start: 'top bottom',
+                            end: 'bottom top',
+                            scrub: true
+                        }
+                    });
+                });
+
+                // Magnetic buttons
+                const magneticBtns = document.querySelectorAll('.magnetic-btn');
+                magneticBtns.forEach(btn => {
+                    btn.addEventListener('mousemove', (e) => {
+                        const rect = btn.getBoundingClientRect();
+                        const x = e.clientX - rect.left - rect.width / 2;
+                        const y = e.clientY - rect.top - rect.height / 2;
+                        
+                        gsap.to(btn, {
+                            x: x * 0.3,
+                            y: y * 0.3,
+                            duration: 0.3,
+                            ease: 'power2.out'
+                        });
+                    });
+
+                    btn.addEventListener('mouseleave', () => {
+                        gsap.to(btn, {
+                            x: 0,
+                            y: 0,
+                            duration: 0.3,
+                            ease: 'power2.out'
+                        });
+                    });
+                });
+
+                // Experience tabs
+                const experienceTabs = document.querySelectorAll('.experience-tab');
+                const experienceData = {
+                    marisco: {
+                        title: 'Marisco del Día',
+                        text: 'Cada mañana seleccionamos personalmente el mejor marisco de la lonja. Langostas, bogavantes, gambas rojas, percebes y los mejores mariscos del Cantábrico y el Mediterráneo.',
+                        image: 'https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=800&q=80',
+                        items: [
+                            'Langosta a la plancha con mantequilla de ajo',
+                            'Bogavante azul del Cantábrico',
+                            'Gambas rojas de Denia a la sal',
+                            'Percebes de piedra gallegos',
+                            'Nécoras y centollos al natural'
+                        ]
+                    },
+                    arroces: {
+                        title: 'Arroces Tradicionales',
+                        text: 'Nuestros arroces son elaborados con arroz bomba de Calasparra y el mejor fumet de pescado. Cada plato es una obra maestra de la cocina mediterránea.',
+                        image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80',
+                        items: [
+                            'Paella de marisco con producto fresco',
+                            'Arroz senyoret (marisco pelado)',
+                            'Fideuá tradicional con alioli',
+                            'Arroz caldoso de bogavante',
+                            'Arroz negro de sepia y gambas'
+                        ]
+                    },
+                    pescado: {
+                        title: 'Pescado Fresco',
+                        text: 'Pescado del día seleccionado en la lonja. Lubina, dorada, rodaballo y las mejores especies del Mediterráneo preparadas de forma sencilla para respetar su sabor.',
+                        image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&q=80',
+                        items: [
+                            'Lubina a la espalda al horno',
+                            'Rodaballo salvaje del Cantábrico',
+                            'Dorada a la sal',
+                            'Sepia a la plancha',
+                            'Tellinas al vapor'
+                        ]
+                    },
+                    carnes: {
+                        title: 'Carnes Premium',
+                        text: 'Selección de las mejores carnes maduradas. Chuletón de vaca vieja, solomillo de ternera y cordero lechal preparados a la brasa o a la plancha.',
+                        image: 'https://images.unsplash.com/photo-1544025162-d76694265947?w=800&q=80',
+                        items: [
+                            'Chuletón de vaca madurado 45 días',
+                            'Solomillo de ternera a la plancha',
+                            'Cordero lechal asado',
+                            'Entrecot de buey',
+                            'Secreto ibérico'
+                        ]
+                    }
+                };
+
+                experienceTabs.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        const tabName = tab.dataset.tab;
+                        const data = experienceData[tabName];
+
+                        // Actualizar tabs activas
+                        experienceTabs.forEach(t => t.classList.remove('active'));
+                        tab.classList.add('active');
+
+                        // Animar cambio de contenido
+                        const experienceText = document.getElementById('experienceText');
+                        const experienceImage = document.getElementById('experienceImage');
+
+                        gsap.to(experienceText, {
+                            opacity: 0,
+                            y: 20,
+                            duration: 0.3,
+                            onComplete: () => {
+                                experienceText.querySelector('h3').textContent = data.title;
+                                experienceText.querySelector('p').textContent = data.text;
+                                
+                                const list = experienceText.querySelector('.experience-list');
+                                list.innerHTML = data.items.map(item => `
+                                    <li>
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>${item}</span>
+                                    </li>
+                                `).join('');
+                                
+                                experienceImage.src = data.image;
+                                
+                                gsap.to(experienceText, {
+                                    opacity: 1,
+                                    y: 0,
+                                    duration: 0.5
+                                });
+                            }
+                        });
+
+                        gsap.to(experienceImage, {
+                            opacity: 0,
+                            scale: 0.95,
+                            duration: 0.3,
+                            onComplete: () => {
+                                gsap.to(experienceImage, {
+                                    opacity: 1,
+                                    scale: 1,
+                                    duration: 0.5
+                                });
+                            }
+                        });
+                    });
+                });
+
+                // Form submission
+                const reservationForm = document.getElementById('reservationForm');
+                reservationForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const btn = reservationForm.querySelector('.form-submit');
+                    const originalText = btn.innerHTML;
+                    
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+                    btn.disabled = true;
+                    
+                    setTimeout(() => {
+                        btn.innerHTML = '<i class="fas fa-check"></i> Reserva Solicitada';
+                        btn.style.background = 'var(--color-accent)';
+                        
+                        setTimeout(() => {
+                            alert('¡Gracias por tu reserva! Te contactaremos en menos de 2 horas para confirmarla.');
+                            reservationForm.reset();
+                            btn.innerHTML = originalText;
+                            btn.disabled = false;
+                            btn.style.background = '';
+                        }, 1000);
+                    }, 1500);
+                });
+
+                // Set min date to today
+                const dateInput = document.getElementById('fecha');
+                const today = new Date().toISOString().split('T')[0];
+                dateInput.setAttribute('min', today);
+            }
+
+            // ===== SCRAMBLE TEXT EFFECT =====
+            class TextScramble {
+                constructor(el) {
+                    this.el = el;
+                    this.chars = '!<>-_\\/[]{}—=+*^?#________';
+                    this.update = this.update.bind(this);
+                }
+                
+                setText(newText) {
+                    const oldText = this.el.innerText;
+                    const length = Math.max(oldText.length, newText.length);
+                    const promise = new Promise((resolve) => this.resolve = resolve);
+                    this.queue = [];
+                    for (let i = 0; i < length; i++) {
+                        const from = oldText[i] || '';
+                        const to = newText[i] || '';
+                        const start = Math.floor(Math.random() * 40);
+                        const end = start + Math.floor(Math.random() * 40);
+                        this.queue.push({ from, to, start, end });
+                    }
+                    cancelAnimationFrame(this.frameRequest);
+                    this.frame = 0;
+                    this.update();
+                    return promise;
+                }
+                
+                update() {
+                    let output = '';
+                    let complete = 0;
+                    for (let i = 0, n = this.queue.length; i < n; i++) {
+                        let { from, to, start, end, char } = this.queue[i];
+                        if (this.frame >= end) {
+                            complete++;
+                            output += to;
+                        } else if (this.frame >= start) {
+                            if (!char || Math.random() < 0.28) {
+                                char = this.randomChar();
+                                this.queue[i].char = char;
+                            }
+                            output += `<span style="color: var(--color-accent)">${char}</span>`;
+                        } else {
+                            output += from;
+                        }
+                    }
+                    this.el.innerHTML = output;
+                    if (complete === this.queue.length) {
+                        this.resolve();
+                    } else {
+                        this.frameRequest = requestAnimationFrame(this.update);
+                        this.frame++;
+                    }
+                }
+                
+                randomChar() {
+                    return this.chars[Math.floor(Math.random() * this.chars.length)];
+                }
+            }
+
+            // Aplicar scramble effect al navbar en scroll
+            const navbarLogo = document.querySelector('.navbar-logo-text');
+            if (navbarLogo) {
+                const fx = new TextScramble(navbarLogo);
+                let counter = 0;
+                const phrases = ['LA BRÚJULA', 'FINE DINING', 'MARISCO FRESCO'];
+                
+                const next = () => {
+                    fx.setText(phrases[counter]).then(() => {
+                        setTimeout(next, 3000);
+                    });
+                    counter = (counter + 1) % phrases.length;
+                };
+                
+                // Iniciar después de 5 segundos
+                setTimeout(next, 5000);
+            }
+
+            // ===== GALLERY LIGHTBOX =====
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const img = item.querySelector('img');
+                    const title = item.querySelector('.gallery-title').textContent;
+                    
+                    // Crear lightbox
+                    const lightbox = document.createElement('div');
+                    lightbox.className = 'lightbox';
+                    lightbox.style.cssText = `
+                        position: fixed;
+                        inset: 0;
+                        background: rgba(0,0,0,0.95);
+                        z-index: 100000;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        opacity: 0;
+                        transition: opacity 0.3s;
+                    `;
+                    
+                    lightbox.innerHTML = `
+                        <div style="max-width: 90%; max-height: 90%; position: relative;">
+                            <img src="${img.src}" alt="${title}" style="max-width: 100%; max-height: 90vh; object-fit: contain;">
+                            <h3 style="color: white; text-align: center; margin-top: 1rem; font-family: var(--font-display);">${title}</h3>
+                            <button onclick="this.closest('.lightbox').remove()" style="position: absolute; top: -40px; right: 0; background: none; border: none; color: white; font-size: 2rem; cursor: pointer;">&times;</button>
+                        </div>
+                    `;
+                    
+                    document.body.appendChild(lightbox);
+                    setTimeout(() => lightbox.style.opacity = '1', 10);
+                });
+            });
+        });
+
+        // ===== PREVENIR CLICK DERECHO EN IMÁGENES (Opcional) =====
+        document.addEventListener('contextmenu', (e) => {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
