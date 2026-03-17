@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Restaurante La Brújula - Experiencia gastronómica de lujo frente al mar en Alicante. Marisco fresco, arroces tradicionales y vistas inolvidables.">
+    <meta name="description" content="Restaurante La Brújula - Experiencia gastronómica de lujo frente al mar en Alicante. Marisco fresco y arroces tradicionales.">
     <title>La Brújula | Experiencia Gastronómica frente al Mar - Alicante</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -111,14 +111,6 @@
         }
         .navbar-link:hover { color: var(--color-accent); }
         .navbar-link:hover::before { width: 100%; }
-        .navbar-cta {
-            padding: 1rem 2.5rem; background: var(--gradient-gold);
-            color: var(--color-primary); border: none; border-radius: var(--radius-full);
-            font-family: var(--font-body); font-weight: 600; font-size: 0.875rem;
-            letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer;
-            transition: all var(--transition-base); text-decoration: none; display: inline-block;
-        }
-        .navbar-cta:hover { transform: translateY(-2px); box-shadow: var(--shadow-gold); }
         .navbar-toggle {
             display: none; flex-direction: column; gap: 5px;
             background: none; border: none; cursor: pointer; padding: 0.5rem;
@@ -144,9 +136,9 @@
         }
         .hero-bg-image {
             position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url('https://media-cdn.tripadvisor.com/media/photo-o/1a/2e/89/1c/restaurant-la-brujula.jpg');
+            background-image: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=1920&q=80');
             background-size: cover; background-position: center;
-            opacity: 0.4; z-index: 0;
+            opacity: 0.3; z-index: 0;
         }
         .hero-content {
             position: relative; z-index: 3; text-align: center;
@@ -193,14 +185,6 @@
         }
         .btn-primary { background: var(--gradient-gold); color: var(--color-primary); }
         .btn-primary:hover { transform: translateY(-3px); box-shadow: var(--shadow-gold); }
-        .btn-outline {
-            background: transparent; color: var(--color-white);
-            border: 2px solid rgba(255,255,255,0.3);
-        }
-        .btn-outline:hover {
-            background: var(--color-white); color: var(--color-primary);
-            border-color: var(--color-white);
-        }
         .hero-scroll {
             position: absolute; bottom: 3rem; left: 50%;
             transform: translateX(-50%); z-index: 3;
@@ -416,18 +400,18 @@
             color: var(--color-gray); line-height: 1.6;
         }
 
-        /* RESERVAS */
-        .reservations { background: var(--color-cream); }
-        .reservations-grid {
+        /* CONTACTO */
+        .contact { background: var(--color-cream); }
+        .contact-grid {
             display: grid; grid-template-columns: 1fr 1fr;
             gap: 6rem; align-items: center;
         }
-        .reservations-info h3 {
+        .contact-info h3 {
             font-family: var(--font-display); font-size: 3rem;
             font-weight: 700; color: var(--color-primary);
             margin-bottom: 2rem; line-height: 1.1;
         }
-        .reservations-info > p {
+        .contact-info > p {
             font-family: var(--font-accent); font-size: 1.25rem;
             color: var(--color-dark-gray); margin-bottom: 3rem; line-height: 1.8;
         }
@@ -450,37 +434,6 @@
             text-decoration: none; line-height: 1.6; transition: color 0.3s ease;
         }
         .contact-content a:hover { color: var(--color-accent); }
-        .reservations-form {
-            background: var(--color-white); padding: 3rem;
-            border-radius: var(--radius-xl); box-shadow: var(--shadow-xl);
-        }
-        .form-group { margin-bottom: 2rem; }
-        .form-label {
-            display: block; font-family: var(--font-body);
-            font-size: 0.875rem; font-weight: 600; color: var(--color-primary);
-            margin-bottom: 0.75rem; letter-spacing: 0.05em;
-        }
-        .form-control {
-            width: 100%; padding: 1rem 1.5rem;
-            border: 2px solid #e9ecef; border-radius: var(--radius-md);
-            font-family: var(--font-body); font-size: 1rem;
-            color: var(--color-primary); background: var(--color-white);
-            transition: all 0.3s ease;
-        }
-        .form-control:focus {
-            outline: none; border-color: var(--color-accent);
-            box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.1);
-        }
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-        .form-submit {
-            width: 100%; padding: 1.5rem; background: var(--gradient-gold);
-            border: none; border-radius: var(--radius-md);
-            font-family: var(--font-body); font-size: 1rem; font-weight: 600;
-            letter-spacing: 0.1em; text-transform: uppercase;
-            color: var(--color-primary); cursor: pointer;
-            transition: all var(--transition-base);
-        }
-        .form-submit:hover { transform: translateY(-2px); box-shadow: var(--shadow-gold); }
 
         /* TESTIMONIOS */
         .testimonials { background: var(--color-primary); }
@@ -575,7 +528,7 @@
 
         /* RESPONSIVE */
         @media (max-width: 1200px) {
-            .intro-grid, .experience-content, .menu-grid, .reservations-grid {
+            .intro-grid, .experience-content, .menu-grid, .contact-grid {
                 grid-template-columns: 1fr;
             }
             .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -590,7 +543,6 @@
             }
             .navbar-menu.active { right: 0; }
             .navbar-toggle { display: flex; }
-            .navbar-cta { display: none; }
             .container { padding: 0 1.5rem; }
             .hero { min-height: 700px; }
             .intro-features { grid-template-columns: 1fr; }
@@ -598,8 +550,6 @@
             .experience-tab { padding: 0.75rem 1.5rem; font-size: 0.8rem; }
             .gallery-grid { grid-template-columns: 1fr; }
             .menu-category-block { padding: 2rem; }
-            .reservations-form { padding: 2rem; }
-            .form-row { grid-template-columns: 1fr; }
             .footer-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px) {
@@ -633,11 +583,8 @@
                 <li><a href="#experiencia" class="navbar-link">Experiencia</a></li>
                 <li><a href="#carta" class="navbar-link">Carta</a></li>
                 <li><a href="#galeria" class="navbar-link">Galería</a></li>
-                <li><a href="#reservas" class="navbar-link">Reservas</a></li>
+                <li><a href="#contacto" class="navbar-link">Contacto</a></li>
             </ul>
-            <a href="tel:+34965202093" class="navbar-cta">
-                <i class="fas fa-phone"></i> Reservar
-            </a>
             <button class="navbar-toggle" id="navbarToggle" aria-label="Menú">
                 <span></span><span></span><span></span>
             </button>
@@ -663,11 +610,11 @@
                 <span>Marina Deportiva Puerto de Alicante, Muelle de Levante, 6</span>
             </div>
             <div class="hero-cta-group">
-                <a href="#reservas" class="btn btn-primary">
-                    <i class="fas fa-calendar-check"></i> Reservar Mesa
+                <a href="#carta" class="btn btn-primary">
+                    <i class="fas fa-book-open"></i> Ver Carta
                 </a>
-                <a href="#carta" class="btn btn-outline">
-                    <i class="fas fa-book-open"></i> Explorar Carta
+                <a href="#contacto" class="btn btn-primary" style="background:transparent;border:2px solid var(--color-accent);color:var(--color-accent)">
+                    <i class="fas fa-phone"></i> Contactar
                 </a>
             </div>
         </div>
@@ -682,7 +629,7 @@
         <div class="container">
             <div class="intro-grid">
                 <div class="intro-image-wrapper reveal">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-o/1a/2e/89/1a/interior-del-restaurante.jpg" alt="Restaurante La Brújula - Interior con vistas al puerto" class="intro-image">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Restaurante La Brújula - Interior" class="intro-image">
                 </div>
                 <div class="intro-content">
                     <span class="intro-label reveal">Nuestra Historia</span>
@@ -745,7 +692,7 @@
             </div>
             <div class="experience-content">
                 <div class="experience-image reveal">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-o/0f/3a/5c/8d/pescado-fresco-a-la.jpg" alt="Marisco y pescado fresco" id="expImage">
+                    <img src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=800&q=80" alt="Marisco fresco" id="expImage">
                 </div>
                 <div class="experience-text reveal" id="expText">
                     <h3>Marisco del Día</h3>
@@ -756,7 +703,7 @@
                         <li><i class="fas fa-check-circle"></i> Gambas rojas de Denia a la sal</li>
                         <li><i class="fas fa-check-circle"></i> Percebes de piedra gallegos</li>
                     </ul>
-                    <a href="#reservas" class="btn btn-primary">Reservar Ahora</a>
+                    <a href="#contacto" class="btn btn-primary">Llamar Ahora</a>
                 </div>
             </div>
         </div>
@@ -771,45 +718,45 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item reveal">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-o/1a/2e/89/1c/restaurant-la-brujula.jpg" alt="Interior del restaurante">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Interior del restaurante">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Interior</span>
                         <h3 class="gallery-title">Ambiente Acogedor</h3>
                     </div>
                 </div>
                 <div class="gallery-item reveal">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-o/1a/2e/89/1b/vistas-al-puerto.jpg" alt="Terraza con vistas al puerto">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Terraza con vistas">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Terraza</span>
-                        <h3 class="gallery-title">Vistas al Puerto Deportivo</h3>
+                        <h3 class="gallery-title">Vistas al Puerto</h3>
                     </div>
                 </div>
                 <div class="gallery-item reveal">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-o/0f/3a/5c/8e/paella-de-marisco.jpg" alt="Paella de marisco">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80" alt="Paella de marisco">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Especialidad</span>
                         <h3 class="gallery-title">Paella de Marisco</h3>
                     </div>
                 </div>
                 <div class="gallery-item reveal">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-o/1a/2e/89/1d/marisco-fresco.jpg" alt="Marisco fresco">
+                    <img src="https://images.unsplash.com/photo-1534939561126-855b8675edd7?w=800&q=80" alt="Marisco fresco">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Producto</span>
                         <h3 class="gallery-title">Marisco del Día</h3>
                     </div>
                 </div>
                 <div class="gallery-item reveal">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-o/0f/3a/5c/8f/pescado-a-la-plancha.jpg" alt="Pescado a la plancha">
+                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&q=80" alt="Pescado fresco">
                     <div class="gallery-overlay">
                         <span class="gallery-category">Pescado</span>
                         <h3 class="gallery-title">Pescado Fresco</h3>
                     </div>
                 </div>
                 <div class="gallery-item reveal">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-o/1a/2e/89/1e/terraza-exterior.jpg" alt="Terraza exterior">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Plato gourmet">
                     <div class="gallery-overlay">
-                        <span class="gallery-category">Exterior</span>
-                        <h3 class="gallery-title">Terraza Frente al Mar</h3>
+                        <span class="gallery-category">Alta Cocina</span>
+                        <h3 class="gallery-title">Presentación Gourmet</h3>
                     </div>
                 </div>
             </div>
@@ -936,14 +883,14 @@
         </div>
     </section>
 
-    <!-- Reservas -->
-    <section class="reservations section" id="reservas">
+    <!-- Contacto -->
+    <section class="contact section" id="contacto">
         <div class="container">
-            <div class="reservations-grid">
-                <div class="reservations-info reveal">
-                    <span class="section-label" style="display:block;margin-bottom:1rem;">Reservas</span>
-                    <h3>Reserva tu Mesa y Vive una Experiencia Única</h3>
-                    <p>Te recomendamos reservar con antelación, especialmente para fines de semana y fechas señaladas.</p>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <span class="section-label" style="display:block;margin-bottom:1rem;">Contacto</span>
+                    <h3>Visítanos o Llámanos</h3>
+                    <p>Estamos en el corazón del puerto deportivo de Alicante. Te esperamos para vivir una experiencia gastronómica única.</p>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="contact-content">
@@ -966,67 +913,16 @@
                         </div>
                     </div>
                 </div>
-                <form class="reservations-form reveal" id="reservationForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label" for="nombre">Nombre *</label>
-                            <input type="text" id="nombre" class="form-control" required placeholder="Tu nombre">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="telefono">Teléfono *</label>
-                            <input type="tel" id="telefono" class="form-control" required placeholder="+34 600 000 000">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label" for="email">Email</label>
-                            <input type="email" id="email" class="form-control" placeholder="tu@email.com">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="personas">Personas *</label>
-                            <select id="personas" class="form-control" required>
-                                <option value="">Seleccionar</option>
-                                <option value="2">2 personas</option>
-                                <option value="3">3 personas</option>
-                                <option value="4">4 personas</option>
-                                <option value="5">5 personas</option>
-                                <option value="6">6 personas</option>
-                                <option value="7+">7 o más</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label" for="fecha">Fecha *</label>
-                            <input type="date" id="fecha" class="form-control" required>
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="hora">Hora *</label>
-                            <select id="hora" class="form-control" required>
-                                <option value="">Seleccionar</option>
-                                <option value="13:00">13:00</option>
-                                <option value="13:30">13:30</option>
-                                <option value="14:00">14:00</option>
-                                <option value="14:30">14:30</option>
-                                <option value="20:00">20:00</option>
-                                <option value="20:30">20:30</option>
-                                <option value="21:00">21:00</option>
-                                <option value="21:30">21:30</option>
-                                <option value="22:00">22:00</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label" for="notas">Notas especiales</label>
-                        <textarea id="notas" class="form-control" rows="3" placeholder="Alergias, ocasión especial..."></textarea>
-                    </div>
-                    <button type="submit" class="form-submit">
-                        <i class="fas fa-paper-plane"></i> Solicitar Reserva
-                    </button>
-                    <p style="margin-top:1.5rem;font-size:0.85rem;color:var(--color-gray);text-align:center;">
-                        <i class="fas fa-info-circle"></i> Te confirmaremos en menos de 2 horas
+                <div class="reveal" style="background:var(--gradient-dark);padding:3rem;border-radius:var(--radius-xl);text-align:center;">
+                    <i class="fas fa-phone-volume" style="font-size:4rem;color:var(--color-accent);margin-bottom:1.5rem;"></i>
+                    <h3 style="font-family:var(--font-display);font-size:2rem;color:var(--color-white);margin-bottom:1rem;">¿Tienes una duda?</h3>
+                    <p style="font-family:var(--font-accent);font-size:1.25rem;color:var(--color-gray);margin-bottom:2rem;">
+                        Llámanos y te atenderemos encantados
                     </p>
-                </form>
+                    <a href="tel:+34965202093" class="btn btn-primary" style="font-size:1.25rem;padding:1.5rem 3rem;">
+                        <i class="fas fa-phone"></i> +34 965 20 20 93
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -1109,20 +1005,19 @@
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>Servicios</h4>
+                    <h4>Información</h4>
                     <ul class="footer-links">
-                        <li><a href="#reservas">Reservas</a></li>
-                        <li><a href="#">Eventos</a></li>
-                        <li><a href="#">Catering</a></li>
-                        <li><a href="#">Tarjetas Regalo</a></li>
+                        <li><a href="#galeria">Galería</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#">Aviso Legal</a></li>
+                        <li><a href="#">Privacidad</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h4>Legal</h4>
+                    <h4>Contacto</h4>
                     <ul class="footer-links">
-                        <li><a href="#">Aviso Legal</a></li>
-                        <li><a href="#">Privacidad</a></li>
-                        <li><a href="#">Cookies</a></li>
+                        <li><a href="tel:+34965202093">+34 965 20 20 93</a></li>
+                        <li><a href="#">Enviar Email</a></li>
                     </ul>
                 </div>
             </div>
@@ -1208,19 +1103,19 @@
                 marisco: {
                     title: 'Marisco del Día',
                     text: 'Cada mañana seleccionamos personalmente el mejor marisco de la lonja. Langostas, bogavantes, gambas rojas y los mejores mariscos.',
-                    image: 'https://media-cdn.tripadvisor.com/media/photo-o/0f/3a/5c/8d/pescado-fresco-a-la.jpg',
+                    image: 'https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=800&q=80',
                     items: ['Langosta a la plancha', 'Bogavante azul', 'Gambas rojas de Denia', 'Percebes gallegos']
                 },
                 arroces: {
                     title: 'Arroces Tradicionales',
                     text: 'Nuestros arroces son elaborados con arroz bomba de Calasparra y el mejor fumet de pescado. Cada plato es una obra maestra.',
-                    image: 'https://media-cdn.tripadvisor.com/media/photo-o/0f/3a/5c/8e/paella-de-marisco.jpg',
+                    image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&q=80',
                     items: ['Paella de marisco', 'Arroz senyoret', 'Fideuá tradicional', 'Arroz caldoso']
                 },
                 pescado: {
                     title: 'Pescado Fresco',
                     text: 'Pescado del día seleccionado en la lonja. Lubina, dorada, rodaballo y las mejores especies del Mediterráneo.',
-                    image: 'https://media-cdn.tripadvisor.com/media/photo-o/0f/3a/5c/8f/pescado-a-la-plancha.jpg',
+                    image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&q=80',
                     items: ['Lubina a la espalda', 'Rodaballo salvaje', 'Dorada a la sal', 'Sepia a la plancha']
                 }
             };
@@ -1247,31 +1142,7 @@
                 });
             });
 
-            // Formulario
-            const form = document.getElementById('reservationForm');
-            if (form) {
-                document.getElementById('fecha').min = new Date().toISOString().split('T')[0];
-                form.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    const btn = form.querySelector('.form-submit');
-                    const original = btn.innerHTML;
-                    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
-                    btn.disabled = true;
-                    setTimeout(() => {
-                        btn.innerHTML = '<i class="fas fa-check"></i> Reserva Solicitada';
-                        btn.style.background = 'var(--color-accent)';
-                        setTimeout(() => {
-                            alert('¡Gracias! Te contactaremos en menos de 2 horas.');
-                            form.reset();
-                            btn.innerHTML = original;
-                            btn.disabled = false;
-                            btn.style.background = '';
-                        }, 1000);
-                    }, 1500);
-                });
-            }
-
-            console.log('✅ La Brújula - Web cargada correctamente con fotos reales');
+            console.log('✅ La Brújula - Web cargada correctamente');
         }
 
         if (document.readyState === 'complete') {
